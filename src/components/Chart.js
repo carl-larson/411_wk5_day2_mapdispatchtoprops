@@ -9,8 +9,8 @@ const Chart = (props) => {
         <div>
             <PieChart style={{ width: '200px' }}
                 data={[
-                    { title: 'Over', value: 10, color: '#C13C37' },
-                    { title: 'Under', value: 15, color: '#E38627' },
+                    { title: 'Over', value: 10, color: '#AAFF22' },
+                    { title: 'Under', value: 15, color: '#334455' },
                 ]}
                 label
                 labelStyle={{
@@ -26,7 +26,7 @@ const Chart = (props) => {
 function Legend() {
     return (
         <h6>Horsepower: &nbsp;
-            <span style={{background: '#C13C37'}}>
+            <span style={{background: '#AAFF22'}}>
                 &nbsp;
                 &nbsp;
                 &nbsp;
@@ -34,7 +34,7 @@ function Legend() {
             &nbsp;
             <span>Over 200</span>
             &nbsp;
-            <span style={{background: '#E38627'}}>
+            <span style={{background: '#334455'}}>
                 &nbsp;
                 &nbsp;
                 &nbsp;

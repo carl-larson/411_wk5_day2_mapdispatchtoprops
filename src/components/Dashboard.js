@@ -10,9 +10,14 @@ import {
 import DeleteIcon from '@material-ui/icons/Delete'
 import Chart from './Chart'
 import Total from './Total'
-import AddCar from './AddCar'
+import AddCar from '../containers/AddCar'
  
 const Dashboard = (props) => {
+    const handleClick = (idx) => {
+        // e.preventDefault();
+        // console.log(props.cars);
+        props.removeCar(idx)
+    }
     return (
         <Container maxWidth="lg" className="car-container">
             <h4>Welcome, {props.user.username}</h4>
@@ -43,9 +48,7 @@ const Dashboard = (props) => {
                         <TableCell>{car["cylinders"]}</TableCell>
                         <TableCell>{car["horsepower"]}</TableCell>
                         <TableCell>
-                            <DeleteIcon
-                                // add onClick method here
-                                className="icon text-red" />
+                            <DeleteIcon onClick={() => handleClick(idx)} className="icon text-red" />
                         </TableCell>
                     </TableRow>
                 ))}
